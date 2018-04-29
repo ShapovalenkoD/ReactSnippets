@@ -159,7 +159,7 @@
 		],
 		"description": "react create static propTypes"
 	},
-	"react create default defaultProp": {
+	"react create defaultProp": {
 		"scope": "javascript, JavaScriptXML, typescript",
 		"prefix": "sdp",
 		"body": [
