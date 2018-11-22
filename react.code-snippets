@@ -1,294 +1,246 @@
 {
-	"react create function": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "rcf",
-		"body": [
-			"import React from 'react';",
-			"",
-			"const $1 = () => (",
-			"  $0",
-			")",
-			"",
-			"export default $1;",
-			"",
-		],
-		"description": "react create funciotn"
-	},
-	"react create function with everything": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "rcfa",
-		"body": [
-			"import React from 'react';",
-			"import PropTypes from 'prop-types';",
-			"import styled from 'styled-components';",
-			"",
-			"const $1 = ({ $2 }) => (",
-			"  <Wrap>",
-			"    ",
-			"  </Wrap>",
-			")",
-			"",
-			"export default $1;",
-			"",
-			"$1.propTypes = { $0 };",
-			"",
-			"$1.defaultProps = {};",
-			"",
-			"const Wrap = styled.div``"
-		],
-		"description": "react create funciotn + propTypes + import styled"
-	},
-	"react create class": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "rcc",
-		"body": [
-			"import React, { Component } from 'react';",
-			"import PropTypes from 'prop-types';",
-			"",
-			"class $1 extends Component {",
-			"  static propTypes = {}",
-			"",
-			"  static defaultProps = {}",
-			"",
-			"  render() {",
-			"    return (",
-			"      <div>",
-			"        $0",
-			"      </div>",
-			"    )",
-			"  }",
-			"",
-			"}",
-			"",
-			"export default $1;",
-			"",
-		],
-		"description": "react create class"
-	},
-	"react create class with everything": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "rcca",
-		"body": [
-			"import React, { Component } from 'react';",
-			"import PropTypes from 'prop-types';",
-			"import styled from 'styled-components';",
-			"import { connect } from 'react-redux';",
-			"",
-			"class $1 extends Component {",
-			"  static propTypes = {}",
-			"",
-			"  static defaultProps = {}",
-			"",
-			"  render() {",
-			"    return (",
-			"      <Wrap>",
-			"        $0",
-			"      </Wrap>",
-			"    )",
-			"  }",
-			"",
-			"}",
-			"",
-			"export default connect(state => ({",
-			"  state: state",
-			"}))($1);",
-			"",
-			"const Wrap = styled.div``"
-		],
-		"description": "react create class + propTypes + import styled + connect"
-	},
-	"react create reducer": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "rcr",
-		"body": [
-			"import { Record } from 'immutable';",
-			"import { $1 } from '../constants';",
-			"",
-			"const initialState = Record({ $2 });",
-			"",
-			"export default (state = initialState(), { type }) => {",
-			"  switch (type) {",
-			"    case $1:",
-			"      return state.$0",
-			"    default:",
-			"      return state",
-			"  };",
-			"}"
-		],
-		"description": "react create reducer"
-	},
-	"react import connect": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "impc",
-		"body": [
-			"import { connect } from 'react-redux';",
-		],
-		"description": "react import connect"
-	},
-	"react import styled": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "imps",
-		"body": [
-			"import styled from 'styled-components';",
-		],
-		"description": "react import styled-components"
-	},
-	"react import PropTypes": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "impp",
-		"body": [
-			"import PropTypes from 'prop-types';",
-		],
-		"description": "react import prop-types"
-	},
-	"react create const": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "expcon",
-		"body": [
-			"export const $0 = '$0';",
-		],
-		"description": "react create const"
-	},
-	"react create static propTypes": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "spt",
-		"body": [
-			"static propTypes = {",
-			"  $1: $0",
-			"}"
-		],
-		"description": "react create static propTypes"
-	},
-	"react create defaultProp": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "sdp",
-		"body": [
-			"static defaultProp = {",
-			"  $1: $0",
-			"}"
-		],
-		"description": "react create static defaultProp"
-	},
-	"react create propTypes number ": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptn",
-		"body": [
-			"PropTypes.number,",
-		],
-		"description": "react add PropTypes number"
-	},
-	"react create propTypes number isRequired": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptnr",
-		"body": [
-			"PropTypes.number.isRequired,",
-		],
-		"description": "react add PropTypes number isRequired"
-	},
-	"react create propTypes array ": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "pta",
-		"body": [
-			"PropTypes.array,",
-		],
-		"description": "react add PropTypes array"
-	},
-	"react create propTypes array isRequired": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptar",
-		"body": [
-			"PropTypes.array.isRequired,",
-		],
-		"description": "react add PropTypes array isRequired"
-	},
-	"react create propTypes bool": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptb",
-		"body": [
-			"PropTypes.bool,",
-		],
-		"description": "react add PropTypes bool"
-	},
-	"react create propTypes bool isRequired": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptbr",
-		"body": [
-			"PropTypes.bool.isRequired,",
-		],
-		"description": "react add PropTypes bool isRequired"
-	},
-	"react create propTypes func": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptf",
-		"body": [
-			"PropTypes.func,",
-		],
-		"description": "react add PropTypes func"
-	},
-	"react create propTypes func isRequired": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptfr",
-		"body": [
-			"PropTypes.func.isRequired,",
-		],
-		"description": "react add PropTypes func isRequired"
-	},
-	"react create propTypes object": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "pto",
-		"body": [
-			"PropTypes.object,",
-		],
-		"description": "react add PropTypes object"
-	},
-	"react create propTypes object isRequired": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptor",
-		"body": [
-			"PropTypes.object.isRequired,",
-		],
-		"description": "react add PropTypes object isRequired"
-	},
-	"react create propTypes string": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "pts",
-		"body": [
-			"PropTypes.string,",
-		],
-		"description": "react add PropTypes string"
-	},
-	"react create propTypes string isRequired": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptsr",
-		"body": [
-			"PropTypes.string.isRequired,",
-		],
-		"description": "react add PropTypes string isRequired"
-	},
-	"react create propTypes symbol": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptsy",
-		"body": [
-			"PropTypes.symbol,",
-		],
-		"description": "react add PropTypes symbol"
-	},
-	"react create propTypes symbol isRequired": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptsyr",
-		"body": [
-			"PropTypes.symbol.isRequired,",
-		],
-		"description": "react add PropTypes symbol isRequired"
-	},
-	"react create propTypes shape": {
-		"scope": "javascript, JavaScriptXML, typescript",
-		"prefix": "ptsh",
-		"body": [
-			"PropTypes.shape({",
-			"  $1: $0,",
-			"})"
-		],
-		"description": "react add PropTypes shape"
-	},
+  "react create function": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "rcf",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${TM_FILENAME } = () => (",
+      "  $0",
+      ")",
+      "",
+      "export default ${TM_FILENAME };",
+      ""
+    ],
+    "description": "react create funciotn"
+  },
+  "react create function with everything": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "rcfa",
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types';",
+      "import styled from 'styled-components';",
+      "",
+      "const $1 = ({ $2 }) => (",
+      "  <Wrap>",
+      "    ",
+      "  </Wrap>",
+      ")",
+      "",
+      "export default $1;",
+      "",
+      "$1.propTypes = { $0 };",
+      "",
+      "$1.defaultProps = {};",
+      "",
+      "const Wrap = styled.div``"
+    ],
+    "description": "react create funciotn + propTypes + import styled"
+  },
+  "react create class": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "rcc",
+    "body": [
+      "import React, { Component } from 'react';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "class $1 extends Component {",
+      "  static propTypes = {}",
+      "",
+      "  static defaultProps = {}",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "      </div>",
+      "    )",
+      "  }",
+      "",
+      "}",
+      "",
+      "export default $1;",
+      ""
+    ],
+    "description": "react create class"
+  },
+  "react create class with everything": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "rcca",
+    "body": [
+      "import React, { Component } from 'react';",
+      "import PropTypes from 'prop-types';",
+      "import styled from 'styled-components';",
+      "import { connect } from 'react-redux';",
+      "",
+      "class $1 extends Component {",
+      "  static propTypes = {}",
+      "",
+      "  static defaultProps = {}",
+      "",
+      "  render() {",
+      "    return (",
+      "      <Wrap>",
+      "        $0",
+      "      </Wrap>",
+      "    )",
+      "  }",
+      "",
+      "}",
+      "",
+      "export default connect(state => ({",
+      "  state: state",
+      "}))($1);",
+      "",
+      "const Wrap = styled.div``"
+    ],
+    "description": "react create class + propTypes + import styled + connect"
+  },
+  "react create reducer": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "rcr",
+    "body": [
+      "import { Record } from 'immutable';",
+      "import { $1 } from '../constants';",
+      "",
+      "const initialState = Record({ $2 });",
+      "",
+      "export default (state = initialState(), { type }) => {",
+      "  switch (type) {",
+      "    case $1:",
+      "      return state.$0",
+      "    default:",
+      "      return state",
+      "  };",
+      "}"
+    ],
+    "description": "react create reducer"
+  },
+  "react import connect": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "impc",
+    "body": ["import { connect } from 'react-redux';"],
+    "description": "react import connect"
+  },
+  "react import styled": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "imps",
+    "body": ["import styled from 'styled-components';"],
+    "description": "react import styled-components"
+  },
+  "react import PropTypes": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "impp",
+    "body": ["import PropTypes from 'prop-types';"],
+    "description": "react import prop-types"
+  },
+  "react create const": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "expcon",
+    "body": ["export const $0 = '$0';"],
+    "description": "react create const"
+  },
+  "react create static propTypes": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "spt",
+    "body": ["static propTypes = {", "  $1: $0", "}"],
+    "description": "react create static propTypes"
+  },
+  "react create defaultProp": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "sdp",
+    "body": ["static defaultProp = {", "  $1: $0", "}"],
+    "description": "react create static defaultProp"
+  },
+  "react create propTypes number ": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptn",
+    "body": ["PropTypes.number,"],
+    "description": "react add PropTypes number"
+  },
+  "react create propTypes number isRequired": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptnr",
+    "body": ["PropTypes.number.isRequired,"],
+    "description": "react add PropTypes number isRequired"
+  },
+  "react create propTypes array ": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "pta",
+    "body": ["PropTypes.array,"],
+    "description": "react add PropTypes array"
+  },
+  "react create propTypes array isRequired": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptar",
+    "body": ["PropTypes.array.isRequired,"],
+    "description": "react add PropTypes array isRequired"
+  },
+  "react create propTypes bool": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptb",
+    "body": ["PropTypes.bool,"],
+    "description": "react add PropTypes bool"
+  },
+  "react create propTypes bool isRequired": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptbr",
+    "body": ["PropTypes.bool.isRequired,"],
+    "description": "react add PropTypes bool isRequired"
+  },
+  "react create propTypes func": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptf",
+    "body": ["PropTypes.func,"],
+    "description": "react add PropTypes func"
+  },
+  "react create propTypes func isRequired": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptfr",
+    "body": ["PropTypes.func.isRequired,"],
+    "description": "react add PropTypes func isRequired"
+  },
+  "react create propTypes object": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "pto",
+    "body": ["PropTypes.object,"],
+    "description": "react add PropTypes object"
+  },
+  "react create propTypes object isRequired": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptor",
+    "body": ["PropTypes.object.isRequired,"],
+    "description": "react add PropTypes object isRequired"
+  },
+  "react create propTypes string": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "pts",
+    "body": ["PropTypes.string,"],
+    "description": "react add PropTypes string"
+  },
+  "react create propTypes string isRequired": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptsr",
+    "body": ["PropTypes.string.isRequired,"],
+    "description": "react add PropTypes string isRequired"
+  },
+  "react create propTypes symbol": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptsy",
+    "body": ["PropTypes.symbol,"],
+    "description": "react add PropTypes symbol"
+  },
+  "react create propTypes symbol isRequired": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptsyr",
+    "body": ["PropTypes.symbol.isRequired,"],
+    "description": "react add PropTypes symbol isRequired"
+  },
+  "react create propTypes shape": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "ptsh",
+    "body": ["PropTypes.shape({", "  $1: $0,", "})"],
+    "description": "react add PropTypes shape"
+  }
 }
