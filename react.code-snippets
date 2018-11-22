@@ -5,11 +5,11 @@
     "body": [
       "import React from 'react';",
       "",
-      "const ${TM_FILENAME } = () => (",
+      "const ${TM_FILENAME_BASE} = () => (",
       "  $0",
       ")",
       "",
-      "export default ${TM_FILENAME };",
+      "export default ${TM_FILENAME_BASE};",
       ""
     ],
     "description": "react create funciotn"
@@ -20,23 +20,23 @@
     "body": [
       "import React from 'react';",
       "import PropTypes from 'prop-types';",
-      "import styled from 'styled-components';",
       "",
-      "const $1 = ({ $2 }) => (",
-      "  <Wrap>",
-      "    ",
-      "  </Wrap>",
+      "const ${TM_FILENAME_BASE} = ({ $0 }) => (",
+      "  $1",
       ")",
       "",
-      "export default $1;",
+      "export default ${TM_FILENAME_BASE};",
       "",
-      "$1.propTypes = { $0 };",
+      "${TM_FILENAME_BASE}.propTypes = {",
       "",
-      "$1.defaultProps = {};",
+      "};",
       "",
-      "const Wrap = styled.div``"
+      "${TM_FILENAME_BASE}.defaultProps = {",
+      "",
+      "};",
+      ""
     ],
-    "description": "react create funciotn + propTypes + import styled"
+    "description": "react create funciotn + propTypes"
   },
   "react create class": {
     "scope": "javascript, JavaScriptXML, typescript",
@@ -45,7 +45,7 @@
       "import React, { Component } from 'react';",
       "import PropTypes from 'prop-types';",
       "",
-      "class $1 extends Component {",
+      "class ${TM_FILENAME_BASE} extends Component {",
       "  static propTypes = {}",
       "",
       "  static defaultProps = {}",
@@ -60,7 +60,7 @@
       "",
       "}",
       "",
-      "export default $1;",
+      "export default ${TM_FILENAME_BASE};",
       ""
     ],
     "description": "react create class"
@@ -71,10 +71,9 @@
     "body": [
       "import React, { Component } from 'react';",
       "import PropTypes from 'prop-types';",
-      "import styled from 'styled-components';",
       "import { connect } from 'react-redux';",
       "",
-      "class $1 extends Component {",
+      "class ${TM_FILENAME_BASE} extends Component {",
       "  static propTypes = {}",
       "",
       "  static defaultProps = {}",
@@ -91,31 +90,34 @@
       "",
       "export default connect(state => ({",
       "  state: state",
-      "}))($1);",
-      "",
-      "const Wrap = styled.div``"
+      "}))(${TM_FILENAME_BASE});",
+      ""
     ],
-    "description": "react create class + propTypes + import styled + connect"
+    "description": "react create class + propTypes + connect"
   },
   "react create reducer": {
     "scope": "javascript, JavaScriptXML, typescript",
     "prefix": "rcr",
     "body": [
-      "import { Record } from 'immutable';",
-      "import { $1 } from '../constants';",
+      "const initialState = {};",
       "",
-      "const initialState = Record({ $2 });",
-      "",
-      "export default (state = initialState(), { type }) => {",
+      "export default (state = initialState, { type }) => {",
       "  switch (type) {",
-      "    case $1:",
-      "      return state.$0",
+      "    case :",
+      "      return state",
       "    default:",
       "      return state",
       "  };",
-      "}"
+      "}",
+      ""
     ],
     "description": "react create reducer"
+  },
+  "react creata console.log": {
+    "scope": "javascript, JavaScriptXML, typescript",
+    "prefix": "cl",
+    "body": ["console.log('$0: ', $0);"],
+    "description": "react import connect"
   },
   "react import connect": {
     "scope": "javascript, JavaScriptXML, typescript",
@@ -134,24 +136,6 @@
     "prefix": "impp",
     "body": ["import PropTypes from 'prop-types';"],
     "description": "react import prop-types"
-  },
-  "react create const": {
-    "scope": "javascript, JavaScriptXML, typescript",
-    "prefix": "expcon",
-    "body": ["export const $0 = '$0';"],
-    "description": "react create const"
-  },
-  "react create static propTypes": {
-    "scope": "javascript, JavaScriptXML, typescript",
-    "prefix": "spt",
-    "body": ["static propTypes = {", "  $1: $0", "}"],
-    "description": "react create static propTypes"
-  },
-  "react create defaultProp": {
-    "scope": "javascript, JavaScriptXML, typescript",
-    "prefix": "sdp",
-    "body": ["static defaultProp = {", "  $1: $0", "}"],
-    "description": "react create static defaultProp"
   },
   "react create propTypes number ": {
     "scope": "javascript, JavaScriptXML, typescript",
